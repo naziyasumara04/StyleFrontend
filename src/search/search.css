@@ -1,0 +1,38 @@
+
+h2{
+   
+     font-family:"Dancing Script", cursive;
+     font-weight: 900;
+     font-style: normal;
+
+}
+
+
+   .under a {
+    position: relative;
+    color: black;
+    font-weight: 600;
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease;
+  }
+  
+  .under a::after {
+    content: '';
+    position: absolute; 
+    left: 0;
+    bottom: -2px; /* Positioning of underline relative to text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform-origin: right; /* Animation starts from the right */
+  }
+  
+  
+  
+  .under a:hover::after {
+    transform: scaleX(1); /* Expand the underline */
+    transform-origin: left; /* Expand from the left when hovered */
+  }
+  
